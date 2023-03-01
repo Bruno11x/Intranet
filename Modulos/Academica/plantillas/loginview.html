@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('https://myviewboard.com/blog/wp-content/uploads/2020/05/Synchronous-Learning-vs-Asynchronous-Learning.jpg');
+      background-color: #ffffff;
+      backdrop-filter: blur;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+    }
+
+    /* Add a container to center the content on the page */
+    .container {
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 70px;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    header + * {
+      margin-top: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+    /* Navegador */
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    /* Background de Login */
+    form {
+      background-color: whitesmoke;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    /* Esacio entre titulo y espacio para usuario y contraseña */
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    /* Espacios donde va contraseña y usuario */
+    form input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+
+      font-size: 16px;
+    }
+
+    form button[type="submit"] {
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    form button[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Capacitatec Bicentenario Intranet</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Login</h1>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <div>
+        <label for="Usuario">Usuario:</label>
+        <input type="text" id="Usuario" name="Usuario">
+      </div>
+      <div>
+        <label for="Contraseña">Contraseña:</label>
+        <input type="Contraseña" id="Contraseña" name="Contraseña">
+      </div>
+      <button type="submit">Login</button>
+      </form>
+    </main>
+    <footer>
+      <p>Copyright © 2023 CapacitatecBicentenario</p>
+    </footer>
+  </body>
+</html>
+
+
+
